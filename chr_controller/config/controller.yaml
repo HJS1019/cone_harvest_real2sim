@@ -1,0 +1,18 @@
+chr_controller:
+  ros__parameters:
+    # hold: publish the configured base pose and joint home position
+    # dls_ik: solve TCP pose commands from /chr/target/tcp_pose
+    # external: validate whole-body commands from /chr/target/whole_body
+    planner_mode: hold
+    command_hz: 100.0
+    default_base_position: [0.0, 0.0, 1.2]
+    default_base_rpy: [0.0, 0.0, 0.0]
+    default_joint_position: [0.0, 0.0, 0.0]
+    dls_damping: 0.03
+    dls_tolerance_m: 0.0001
+    dls_orientation_tolerance_rad: 0.01
+    dls_orientation_weight_m_per_rad: 0.25
+    dls_base_translation_scale: 0.35
+    dls_base_yaw_scale: 0.5
+    dls_maximum_step_rad: 0.12
+    dls_maximum_iterations: 100

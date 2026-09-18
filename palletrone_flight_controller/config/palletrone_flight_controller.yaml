@@ -1,0 +1,31 @@
+palletrone_flight_controller:
+  ros__parameters:
+    control_hz: 250.0
+    mass_kg: 6.474
+    gravity: 9.81
+    position_kp: [4.0, 4.0, 7.0]
+    position_ki: [0.05, 0.05, 0.20]
+    position_kd: [4.0, 4.0, 5.0]
+    position_integral_limit: [1.0, 1.0, 1.0]
+    attitude_kp: [8.0, 8.0, 4.0]
+    attitude_ki: [3.0, 3.0, 1.0]
+    attitude_kd: [2.0, 2.0, 1.2]
+    attitude_integral_limit: [0.5, 0.5, 0.5]
+    inertia_diagonal_kg_m2: [0.18, 0.18, 0.20]
+    dob_enabled: false
+    dob_cutoff_hz: 8.0
+    dob_gain: [0.0, 0.0, 0.0]
+    rotor_radius_m: 0.21
+    reaction_torque_coefficient: 0.01
+    minimum_thrust_n: 0.0
+    maximum_thrust_n: 25.0
+    maximum_servo_angle_rad: 0.6
+    # Calibration copied from PX4-Palletrone_firmware/ControlAllocationUtils.cpp:
+    # thrust [N] = a*pwm_us^2 + b*pwm_us + c.
+    pwm_quadratic_n_per_us2: 0.000020962
+    pwm_linear_n_per_us: 0.0085
+    pwm_constant_n: -36.0347
+    pwm_min_us: 1100.0
+    pwm_max_us: 1900.0
+    pwm_normalized_limit: 0.8
+    reference_timeout_s: 0.5
