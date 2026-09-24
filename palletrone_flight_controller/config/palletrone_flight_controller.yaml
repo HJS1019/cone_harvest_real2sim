@@ -14,7 +14,7 @@ palletrone_flight_controller:
     inertia_diagonal_kg_m2: [0.18, 0.18, 0.20]
     dob_enabled: false
     dob_cutoff_hz: 8.0
-    dob_gain: [0.0, 0.0, 0.0]
+    dob_gain: [1.0, 1.0, 1.0]
     rotor_radius_m: 0.21
     reaction_torque_coefficient: 0.01
     minimum_thrust_n: 0.0

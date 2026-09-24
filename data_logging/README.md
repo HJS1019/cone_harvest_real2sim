@@ -7,8 +7,8 @@ After stopping the simulation, open a new terminal and convert the bag:
 
 ```bash
 aw
-cd ~/Desktop/ar_ws/src/data_logging/bags
-python3 ../bag_to_csv.py rosbag2_YYYY_MM_DD-HH_MM_SS/
+cd ~/Desktop/cone_harvest_sim_ws/src/data_logging
+python3 rosbag_to_csv.py bags/rosbag2_YYYY_MM_DD-HH_MM_SS/
 ```
 
 The CSV is created inside the bag directory as
