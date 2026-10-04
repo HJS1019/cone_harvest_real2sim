@@ -97,7 +97,7 @@ class PalletroneFlightController final : public rclcpp::Node {
  public:
   PalletroneFlightController() : Node("palletrone_flight_controller") {
     control_hz_ = declare_parameter("control_hz", 250.0);
-    mass_kg_ = declare_parameter("mass_kg", 6.474);
+    mass_kg_ = declare_parameter("mass_kg", 5.874);
     gravity_ = declare_parameter("gravity", 9.81);
     position_kp_ = vector_parameter("position_kp", {4.0, 4.0, 7.0});
     position_ki_ = vector_parameter("position_ki", {0.05, 0.05, 0.2});
@@ -112,15 +112,15 @@ class PalletroneFlightController final : public rclcpp::Node {
     dob_gain_ = vector_parameter("dob_gain", {0.0, 0.0, 0.0});
     dob_enabled_ = declare_parameter("dob_enabled", false);
     dob_cutoff_hz_ = declare_parameter("dob_cutoff_hz", 8.0);
-    rotor_radius_m_ = declare_parameter("rotor_radius_m", 0.21);
-    reaction_coefficient_ = declare_parameter("reaction_torque_coefficient", 0.01);
-    minimum_thrust_n_ = declare_parameter("minimum_thrust_n", 0.0);
-    maximum_thrust_n_ = declare_parameter("maximum_thrust_n", 25.0);
-    maximum_servo_angle_rad_ = declare_parameter("maximum_servo_angle_rad", 0.6);
+    rotor_radius_m_ = declare_parameter("rotor_radius_m", 0.23);
+    reaction_coefficient_ = declare_parameter("reaction_torque_coefficient", 0.018);
+    minimum_thrust_n_ = declare_parameter("minimum_thrust_n", 0.5);
+    maximum_thrust_n_ = declare_parameter("maximum_thrust_n", 38.52);
+    maximum_servo_angle_rad_ = declare_parameter("maximum_servo_angle_rad", 0.7);
     pwm_quadratic_n_per_us2_ = declare_parameter(
-      "pwm_quadratic_n_per_us2", 2.0962e-5);
-    pwm_linear_n_per_us_ = declare_parameter("pwm_linear_n_per_us", 0.0085);
-    pwm_constant_n_ = declare_parameter("pwm_constant_n", -36.0347);
+      "pwm_quadratic_n_per_us2", 4.045973e-5);
+    pwm_linear_n_per_us_ = declare_parameter("pwm_linear_n_per_us", -0.048579);
+    pwm_constant_n_ = declare_parameter("pwm_constant_n", 1.0186);
     pwm_min_us_ = declare_parameter("pwm_min_us", 1100.0);
     pwm_max_us_ = declare_parameter("pwm_max_us", 1900.0);
     pwm_normalized_limit_ = declare_parameter("pwm_normalized_limit", 0.8);
@@ -345,17 +345,17 @@ class PalletroneFlightController final : public rclcpp::Node {
   }
 
   double control_hz_{250.0};
-  double mass_kg_{6.474};
+  double mass_kg_{5.874};
   double gravity_{9.81};
   double dob_cutoff_hz_{8.0};
-  double rotor_radius_m_{0.21};
-  double reaction_coefficient_{0.01};
-  double minimum_thrust_n_{0.0};
-  double maximum_thrust_n_{25.0};
-  double maximum_servo_angle_rad_{0.6};
-  double pwm_quadratic_n_per_us2_{2.0962e-5};
-  double pwm_linear_n_per_us_{0.0085};
-  double pwm_constant_n_{-36.0347};
+  double rotor_radius_m_{0.23};
+  double reaction_coefficient_{0.018};
+  double minimum_thrust_n_{0.5};
+  double maximum_thrust_n_{38.52};
+  double maximum_servo_angle_rad_{0.7};
+  double pwm_quadratic_n_per_us2_{4.045973e-5};
+  double pwm_linear_n_per_us_{-0.048579};
+  double pwm_constant_n_{1.0186};
   double pwm_min_us_{1100.0};
   double pwm_max_us_{1900.0};
   double pwm_normalized_limit_{0.8};

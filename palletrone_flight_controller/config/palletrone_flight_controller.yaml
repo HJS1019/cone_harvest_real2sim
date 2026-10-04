@@ -20,8 +20,8 @@ palletrone_flight_controller:
     minimum_thrust_n: 0.5
     maximum_thrust_n: 38.52
     maximum_servo_angle_rad: 0.7
-    # Calibration copied from PX4-Palletrone_firmware/ControlAllocationUtils.cpp:
-    # thrust [N] = a*pwm_us^2 + b*pwm_us + c.
+    # New motor: T-Motor CINE77 KV977 + C10.5x5x3 (datasheet, 24 V).
+    # Quadratic fit over 10-80% throttle: thrust [N] = a*pwm_us^2 + b*pwm_us + c.
     pwm_quadratic_n_per_us2: 0.00004045973
     pwm_linear_n_per_us: -0.048579
     pwm_constant_n: 1.0186

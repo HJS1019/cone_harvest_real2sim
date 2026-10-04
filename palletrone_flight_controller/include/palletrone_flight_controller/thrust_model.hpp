@@ -6,9 +6,9 @@
 namespace palletrone_flight_controller {
 
 struct PwmCalibration {
-  double quadratic_n_per_us2{2.0962e-5};
-  double linear_n_per_us{0.0085};
-  double constant_n{-36.0347};
+  double quadratic_n_per_us2{4.045973e-5};
+  double linear_n_per_us{-0.048579};
+  double constant_n{1.0186};
   double minimum_us{1100.0};
   double maximum_us{1900.0};
   double normalized_limit{0.8};
