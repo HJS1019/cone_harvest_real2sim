@@ -67,14 +67,14 @@
   </worldbody>
 
   <actuator>
-    <general name="rotor_0_act" site="rotor_0" gear="0 0 1 0 0 0.01" ctrlrange="0 25"/>
-    <general name="rotor_1_act" site="rotor_1" gear="0 0 1 0 0 -0.01" ctrlrange="0 25"/>
-    <general name="rotor_2_act" site="rotor_2" gear="0 0 1 0 0 0.01" ctrlrange="0 25"/>
-    <general name="rotor_3_act" site="rotor_3" gear="0 0 1 0 0 -0.01" ctrlrange="0 25"/>
-    <position name="rotor_0_tilt_act" joint="rotor_0_tilt_joint" kp="40" kv="4" ctrlrange="-0.6 0.6"/>
-    <position name="rotor_1_tilt_act" joint="rotor_1_tilt_joint" kp="40" kv="4" ctrlrange="-0.6 0.6"/>
-    <position name="rotor_2_tilt_act" joint="rotor_2_tilt_joint" kp="40" kv="4" ctrlrange="-0.6 0.6"/>
-    <position name="rotor_3_tilt_act" joint="rotor_3_tilt_joint" kp="40" kv="4" ctrlrange="-0.6 0.6"/>
+    <general name="rotor_0_act" site="rotor_0" gear="0 0 1 0 0 0.018" ctrlrange="0.5 38.52"/>
+    <general name="rotor_1_act" site="rotor_1" gear="0 0 1 0 0 -0.018" ctrlrange="0.5 38.52"/>
+    <general name="rotor_2_act" site="rotor_2" gear="0 0 1 0 0 0.018" ctrlrange="0.5 38.52"/>
+    <general name="rotor_3_act" site="rotor_3" gear="0 0 1 0 0 -0.018" ctrlrange="0.5 38.52"/>
+    <position name="rotor_0_tilt_act" joint="rotor_0_tilt_joint" kp="40" kv="6.4" ctrlrange="-0.7 0.7"/>
+    <position name="rotor_1_tilt_act" joint="rotor_1_tilt_joint" kp="40" kv="6.4" ctrlrange="-0.7 0.7"/>
+    <position name="rotor_2_tilt_act" joint="rotor_2_tilt_joint" kp="40" kv="6.4" ctrlrange="-0.7 0.7"/>
+    <position name="rotor_3_tilt_act" joint="rotor_3_tilt_joint" kp="40" kv="6.4" ctrlrange="-0.7 0.7"/>
     <motor name="J1_act" joint="J1" ctrlrange="-10 10"/>
     <motor name="J2_act" joint="J2" ctrlrange="-10 10"/>
     <motor name="J3_act" joint="J3" ctrlrange="-10 10"/>
@@ -91,6 +91,6 @@
   </sensor>
 
   <keyframe>
-    <key name="home" qpos="0 0 1.2 1 0 0 0 0 0 0 0 0 0 0" ctrl="16 16 16 16 0 0 0 0 0 0 0"/>
+    <key name="home" qpos="0 0 1.2 1 0 0 0 0 0 0 0 0 0 0" ctrl="14.41 14.41 14.41 14.41 0 0 0 0 0 0 0"/>
   </keyframe>
 </mujoco>

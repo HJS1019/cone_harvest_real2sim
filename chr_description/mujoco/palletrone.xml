@@ -1,6 +1,6 @@
 <mujoco>
   <freejoint name="base_free"/>
-  <inertial mass="4.43" pos="0 0 0" diaginertia="0.09 0.09 0.16"/>
+  <inertial mass="2.6548" pos="0 0 0.0588" diaginertia="0.0592 0.0695 0.0781"/>
   <!-- Exact CAD is visual-only; primitives keep contact stable and inexpensive. -->
   <geom name="palletrone_body_visual" type="mesh" mesh="palletrone_body_mesh"
         group="1" contype="0" conaffinity="0" material="chr_black"/>
@@ -12,40 +12,44 @@
         size="0.012" group="3" rgba="0 0 0 0"/>
 
   <!-- X-configuration copied from the original TPAM Palletrone model. -->
-  <body name="rotor_0_tilt" pos="0.148492 0.148492 0.07"
+  <body name="rotor_0_tilt" pos="0.162635 0.162635 0.065"
         quat="0.9238795 0 0 0.3826834">
-    <joint name="rotor_0_tilt_joint" axis="1 0 0" range="-0.6 0.6"/>
-    <inertial mass="0.02" pos="0 0 0" diaginertia="0.0001 0.0001 0.0001"/>
+    <joint name="rotor_0_tilt_joint" axis="1 0 0" range="-0.7 0.7"/>
+    <inertial mass="0.1613" pos="0 0 0" diaginertia="0.000141 0.000141 0.00019"/>
     <geom name="rotor_0_visual" type="mesh" mesh="palletrone_prop_mesh"
           quat="0.7071068 0 0 0.7071068" group="1" contype="0" conaffinity="0"
           material="chr_orange"/>
     <site name="rotor_0" size="0.012" rgba="1 0.28 0.015 1"/>
   </body>
-  <body name="rotor_1_tilt" pos="-0.148492 0.148492 0.07"
+  <body name="rotor_1_tilt" pos="-0.162635 0.162635 0.065"
         quat="0.3826834 0 0 0.9238795">
-    <joint name="rotor_1_tilt_joint" axis="1 0 0" range="-0.6 0.6"/>
-    <inertial mass="0.02" pos="0 0 0" diaginertia="0.0001 0.0001 0.0001"/>
+    <joint name="rotor_1_tilt_joint" axis="1 0 0" range="-0.7 0.7"/>
+    <inertial mass="0.1613" pos="0 0 0" diaginertia="0.000141 0.000141 0.00019"/>
     <geom name="rotor_1_visual" type="mesh" mesh="palletrone_prop_mesh"
           quat="0.7071068 0 0 0.7071068" group="1" contype="0" conaffinity="0"
           material="chr_orange"/>
     <site name="rotor_1" size="0.012" rgba="1 0.28 0.015 1"/>
   </body>
-  <body name="rotor_2_tilt" pos="-0.148492 -0.148492 0.07"
+  <body name="rotor_2_tilt" pos="-0.162635 -0.162635 0.065"
         quat="0.3826834 0 0 -0.9238795">
-    <joint name="rotor_2_tilt_joint" axis="1 0 0" range="-0.6 0.6"/>
-    <inertial mass="0.02" pos="0 0 0" diaginertia="0.0001 0.0001 0.0001"/>
+    <joint name="rotor_2_tilt_joint" axis="1 0 0" range="-0.7 0.7"/>
+    <inertial mass="0.1613" pos="0 0 0" diaginertia="0.000141 0.000141 0.00019"/>
     <geom name="rotor_2_visual" type="mesh" mesh="palletrone_prop_mesh"
           quat="0.7071068 0 0 0.7071068" group="1" contype="0" conaffinity="0"
           material="chr_orange"/>
     <site name="rotor_2" size="0.012" rgba="1 0.28 0.015 1"/>
   </body>
-  <body name="rotor_3_tilt" pos="0.148492 -0.148492 0.07"
+  <body name="rotor_3_tilt" pos="0.162635 -0.162635 0.065"
         quat="0.9238795 0 0 -0.3826834">
-    <joint name="rotor_3_tilt_joint" axis="1 0 0" range="-0.6 0.6"/>
-    <inertial mass="0.02" pos="0 0 0" diaginertia="0.0001 0.0001 0.0001"/>
+    <joint name="rotor_3_tilt_joint" axis="1 0 0" range="-0.7 0.7"/>
+    <inertial mass="0.1613" pos="0 0 0" diaginertia="0.000141 0.000141 0.00019"/>
     <geom name="rotor_3_visual" type="mesh" mesh="palletrone_prop_mesh"
           quat="0.7071068 0 0 0.7071068" group="1" contype="0" conaffinity="0"
           material="chr_orange"/>
     <site name="rotor_3" size="0.012" rgba="1 0.28 0.015 1"/>
+  </body>
+  <body name="transformer" pos="-0.251 0 0.175"> <!-- 변압기: 윗면 고정, x는 실험 변수 (기본 −0.251) -->
+  <geom name="transformer_visual" type="box" size="0.089 0.05 0.03" mass="0.61"
+        contype="0" conaffinity="0" group="1" rgba="0.9 0.55 0.1 1"/>
   </body>
 </mujoco>
